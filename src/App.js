@@ -122,7 +122,8 @@ function App() {
         document.getElementById('display').innerHTML = 'Closed HH';
       })
     };
-  });
+  }
+  , [handleKeydown]);
 
 
 

@@ -16,6 +16,7 @@ function App() {
 // Creates a function to handle when the keyboard is pressed, this takes in event or e as a parameter
   const handleKeydown = (e) => {
     // The switch is the keys pressed. We put it to uppercase so the switch will read the cases which are in uppercase.
+    e.preventDefault(); 
     switch (e.key.toUpperCase()) {
       case 'Q':
         playAudio(e.key.toUpperCase());

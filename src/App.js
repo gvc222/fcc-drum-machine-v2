@@ -16,8 +16,9 @@ function App() {
 // Creates a function to handle when the keyboard is pressed, this takes in event or e as a parameter
 // eslint-disable-next-line
   const handleKeydown = (e) => {
-    // The switch is the keys pressed. We put it to uppercase so the switch will read the cases which are in uppercase.
+    //preventing the event from defaulting
     e.preventDefault(); 
+    // The switch is the keys pressed. We put it to uppercase so the switch will read the cases which are in uppercase.
     switch (e.key.toUpperCase()) {
       case 'Q':
         playAudio(e.key.toUpperCase());
@@ -63,6 +64,8 @@ function App() {
 
   // {useEffect} is a hook that allows us to use the side effects in our components. for example, fetching data, updating the DOM,
   // For more info, visit https://react.dev/reference/react/useEffect
+  
+  //useEffect for keydown events
   useEffect(() => {
     document.addEventListener('keydown', handleKeydown);
     return () => {
@@ -70,6 +73,7 @@ function App() {
       }
   }, [handleKeydown]);
 
+  //useEffect for button click events
   useEffect(() => {
       document.getElementById("heater-1").addEventListener('click', () => {
         const audio = document.getElementById('Q');
@@ -188,6 +192,7 @@ function App() {
   return (
     <div id="drum-machine">
       <div id="display">
+        {/* Initial text on the display before changing using buttons */}
       Press keyboard buttons to play...
       </div>
 

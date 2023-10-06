@@ -14,6 +14,7 @@ function App() {
   }
 
 // Creates a function to handle when the keyboard is pressed, this takes in event or e as a parameter
+// eslint-disable-next-line
   const handleKeydown = (e) => {
     // The switch is the keys pressed. We put it to uppercase so the switch will read the cases which are in uppercase.
     e.preventDefault(); 

@@ -130,7 +130,7 @@ function App() {
   return (
     <div id="drum-machine">
       <div id="display">
-      Click a button or use your Keyboard
+      Press keyboard buttons to play...
       </div>
 
       <div id="drum-container">

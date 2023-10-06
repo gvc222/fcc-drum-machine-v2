@@ -66,7 +66,10 @@ function App() {
     document.addEventListener('keydown', handleKeydown);
     return () => {
       document.removeEventListener('keydown', handleKeydown);
+      }
+  }, []);
 
+  useEffect(() => {
       document.getElementById("heater-1").addEventListener('click', () => {
         const audio = document.getElementById('Q');
         audio.currentTime = 0;
@@ -121,10 +124,64 @@ function App() {
         audio.play();
         document.getElementById('display').innerHTML = 'Closed HH';
       })
-    };
-  }
-  );
-
+    
+      return () => {
+        document.getElementById("heater-1").removeEventListener('click', () => {
+          const audio = document.getElementById('Q');
+          audio.currentTime = 0;
+          audio.play();
+          document.getElementById('display').innerHTML = 'Heater 1';
+        })
+        document.getElementById("heater-2").removeEventListener('click', () => {
+          const audio = document.getElementById('W');
+          audio.currentTime = 0;
+          audio.play();
+          document.getElementById('display').innerHTML = 'Heater 2';
+        })
+        document.getElementById("heater-3").removeEventListener('click', () => {
+          const audio = document.getElementById('E');
+          audio.currentTime = 0;
+          audio.play();
+          document.getElementById('display').innerHTML = 'Heater 3';
+        })
+        document.getElementById("heater-4").removeEventListener('click', () => {
+          const audio = document.getElementById('A');
+          audio.currentTime = 0;
+          audio.play();
+          document.getElementById('display').innerHTML = 'Heater 4';
+        })
+        document.getElementById("clap").removeEventListener('click', () => {
+          const audio = document.getElementById('S');
+          audio.currentTime = 0;
+          audio.play();
+          document.getElementById('display').innerHTML = 'Clap';
+        })
+        document.getElementById("open-hh").removeEventListener('click', () => {
+          const audio = document.getElementById('D');
+          audio.currentTime = 0;
+          audio.play();
+          document.getElementById('display').innerHTML = 'Open HH';
+        })
+        document.getElementById("kick-n-hat").removeEventListener('click', () => {
+          const audio = document.getElementById('Z');
+          audio.currentTime = 0;
+          audio.play();
+          document.getElementById('display').innerHTML = 'Kick n Hat';
+        })
+        document.getElementById("kick").removeEventListener('click', () => {
+          const audio = document.getElementById('X');
+          audio.currentTime = 0;
+          audio.play();
+          document.getElementById('display').innerHTML = 'Kick';
+        })
+        document.getElementById("closed-hh").removeEventListener('click', () => {
+          const audio = document.getElementById('C');
+          audio.currentTime = 0;
+          audio.play();
+          document.getElementById('display').innerHTML = 'Closed HH';
+        })
+      }
+    } , [])
 
 
   return (

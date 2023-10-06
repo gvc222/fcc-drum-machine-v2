@@ -1,0 +1,104 @@
+
+#drum-machine {
+    border: 1px solid black;
+    margin: auto;
+    padding: auto;
+    background-color: #3f3f3f;
+    padding-bottom: 4rem;
+    border-radius: 10px;
+}
+
+#display {
+    /* border: 1px dashed pink; */
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    width: 80%;
+    margin: auto;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+}
+
+#drum-container {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    /* border: 1px dashed blue; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+
+
+.drum-pad {
+    border: 5px solid rgba(85, 85, 85, 0.625);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    height: 10rem;
+    line-height: 10rem;
+    font-size: 5rem;
+    color: rgba(49, 49, 49, 0.296);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin: 1rem;
+    border-radius: 20px;
+}
+
+.drum-pad:hover {
+    background-color: rgb(0,0,0,0.1);
+}
+.drum-pad:active {
+    background-color: rgba(0,0,0,0.2)
+}
+
+#heater-1{
+    background-color: rgb(251, 115, 47);
+    
+}
+
+#heater-2{
+    background-color: rgb(252, 199, 100)
+}
+
+#heater-3{
+    background-color: rgb(249, 255, 81);
+}
+
+#heater-4{
+    background-color: rgb(208, 255, 21);
+}
+
+#clap {
+    background-color: aqua;
+}
+
+#open-hh {
+    background-color: rgb(249, 83, 205);
+}
+
+#kick-n-hat {
+    background-color: rgb(93, 168, 254);
+}
+
+#kick {
+    background-color: rgb(71, 255, 120);
+}
+
+#closed-hh {
+    background-color: rgb(201, 25, 255);
+}
+
+p {
+    color: white;
+    text-align: center;
+}
+
+a {
+    color: rgb(255, 74, 74);
+    font-weight: bold;
+    text-decoration: none;
+}

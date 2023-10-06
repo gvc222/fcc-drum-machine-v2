@@ -67,7 +67,7 @@ function App() {
     return () => {
       document.removeEventListener('keydown', handleKeydown);
       }
-  }, []);
+  }, [handleKeydown]);
 
   useEffect(() => {
       document.getElementById("heater-1").addEventListener('click', () => {

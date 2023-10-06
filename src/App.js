@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useEffect, useCallback } from 'react'
+import React, { useEffect } from 'react'
 
 function App() {
 // Creates a function to play audio according to their specific id.
@@ -14,7 +14,7 @@ function App() {
   }
 
 // Creates a function to handle when the keyboard is pressed, this takes in event or e as a parameter
-  const handleKeydown = useCallback((e) => {
+  const handleKeydown = (e) => {
     // The switch is the keys pressed. We put it to uppercase so the switch will read the cases which are in uppercase.
     e.preventDefault(); 
     switch (e.key.toUpperCase()) {
@@ -58,7 +58,7 @@ function App() {
       default:
         return;
     }
-  }, [])
+  }
 
   // {useEffect} is a hook that allows us to use the side effects in our components. for example, fetching data, updating the DOM,
   // For more info, visit https://react.dev/reference/react/useEffect
@@ -123,7 +123,7 @@ function App() {
       })
     };
   }
-  , [handleKeydown]);
+  );
 
 
 
